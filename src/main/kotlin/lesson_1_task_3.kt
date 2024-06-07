@@ -1,8 +1,8 @@
 fun main() {
- val year = 1961
+ val years = 1961
  var hour = "09"
  var minute = "07"
- println(year)
+ println(years)
  println(hour)
  println(minute)
  hour = "10"
