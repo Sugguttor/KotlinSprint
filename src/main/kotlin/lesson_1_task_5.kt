@@ -1,10 +1,9 @@
 fun main() {
-    val SECONDS = 6480
-    val MINUTES: Int = SECONDS / 60
-    val HOUR: Int = MINUTES / 60
-    val transferOfMinutes = MINUTES - (HOUR * 60)
-    val transferOfSeconds = SECONDS - (MINUTES * 60)
-    val hour = String.format("0$HOUR")
-    val seconds = String.format("0$transferOfSeconds")
-    println("$hour:$transferOfMinutes:$seconds")
+    val second = 6480
+    val minutes: Int = second / SEC
+    val hours: Int = minutes / SEC
+    val transferOfMinutes = minutes - (hours * SEC)
+    val transferOfSeconds = second - (minutes * SEC)
+        println("%02d:%02d:%02d".format(hours, transferOfMinutes, transferOfSeconds))
 }
+const val SEC = 60
