@@ -3,5 +3,6 @@ fun main() {
     val sum = children.sum().toFloat()
     val size = children.size.toFloat()
     val averageValue: Float = sum / size
+
     println(averageValue)
 }
