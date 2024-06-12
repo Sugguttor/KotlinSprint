@@ -2,13 +2,12 @@ fun main() {
     val departureTime = "9:39"
     val travelTime = 457
 
-    val time = departureTime.split(:)
-}
-//val second = 6480
-//val minutes: Int = second / SEC
-//val hours: Int = minutes / SEC
-//val transferOfMinutes = minutes - (hours * SEC)
-//val transferOfSeconds = second - (minutes * SEC)
-//println("%02d:%02d:%02d".format(hours, transferOfMinutes, transferOfSeconds))
+    val time = departureTime.split(":")
+    val hoursToMinutes = time[0].toInt() * MIN
+    val sumOfMinutes = hoursToMinutes + time[1].toInt() + travelTime
+    val hoursOfArrival = sumOfMinutes / MIN
+    val minutesOfArrival = sumOfMinutes - (hoursOfArrival * MIN)
 
-const val SEC = 60
+    println("$hoursOfArrival:$minutesOfArrival")
+}
+const val MIN = 60
